@@ -12,11 +12,5 @@
 @endsection
 
 @push("scripts")
-    <script>
-        window.addEventListener("load", function () {
-            $(document).ready(function() {
-                console.log("Jquery está funcionando");
-            });
-        })
-    </script>
+    @vite("resources/js/download/download-panel.js")
 @endpush
