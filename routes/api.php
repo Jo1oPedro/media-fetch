@@ -15,3 +15,7 @@ Route::post("/downloads", function (Request $request) {
 
    return response()->json(["message" => "Url salva com sucesso!"]);
 });
+
+Route::get("/dale", function () {
+   return response()->json(["response" => "dale123"]);
+});
