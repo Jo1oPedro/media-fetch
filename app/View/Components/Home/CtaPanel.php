@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\Download;
+namespace App\View\Components\Home;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -21,6 +21,6 @@ class CtaPanel extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.download.cta-panel');
+        return view('components.home.cta-panel');
     }
 }

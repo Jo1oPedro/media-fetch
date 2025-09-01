@@ -17,9 +17,9 @@
                 <span class="text-gray-600 hover:text-indigo-500 transition-colors cursor-pointer">
                     Contact
                 </span>
-                <button class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors">
+                <a href="{{ route("download") }}" class="flex items-center bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors">
                     Get Started
-                </button>
+                </a>
             </div>
         </div>
     </nav>

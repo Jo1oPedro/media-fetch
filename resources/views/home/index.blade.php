@@ -5,10 +5,10 @@
 @section("content")
     <x-header />
     <main>
-        <x-download.download-panel />
-        <x-download.cta-panel />
+        <x-home.download-panel />
+        <x-home.cta-panel />
     </main>
-    <x-download.footer />
+    <x-home.footer />
 @endsection
 
 @push("scripts")
