@@ -8,15 +8,15 @@
                 <div class="text-xl font-semibold text-gray-900">MediaFetch</div>
             </div>
             <div class="hidden md:flex items-center space-x-8">
-                    <span class="text-gray-600 hover:text-indigo-500 transition-colors cursor-pointer">
-                        Features
-                    </span>
                 <span class="text-gray-600 hover:text-indigo-500 transition-colors cursor-pointer">
-                        Pricing
-                    </span>
+                    Features
+                </span>
                 <span class="text-gray-600 hover:text-indigo-500 transition-colors cursor-pointer">
-                        Contact
-                    </span>
+                    Pricing
+                </span>
+                <span class="text-gray-600 hover:text-indigo-500 transition-colors cursor-pointer">
+                    Contact
+                </span>
                 <button class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors">
                     Get Started
                 </button>
