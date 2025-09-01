@@ -3,7 +3,7 @@
         <x-eva-download-outline class="w-6 h-6 text-white"/>
     </div>
     <h1 class="text-2xl font-semibold text-gray-900 mb-2">
-        MediaSync
+        MediaFetch
     </h1>
     <p class="text-gray-600 text-sm">
         Download media from any link
