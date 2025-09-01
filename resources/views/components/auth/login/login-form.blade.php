@@ -1,4 +1,5 @@
-<form id="login-form" class="space-y-6">
+<form method="POST" action="{{ route('login') }}" id="login-form" class="space-y-6">
+    @csrf
     <div id="email-field">
         <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
             Email Address
@@ -43,11 +44,22 @@
         </label>
 
         <span class="text-sm text-indigo-500 hover:text-purple-500 font-medium cursor-pointer">
-                        Forgot password?
-                    </span>
+            Forgot password?
+        </span>
     </div>
 
-    <button type="submit" id="login-btn" class="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 px-4 rounded-md font-medium hover:opacity-90 transition-opacity focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 cursor-pointer">
+    <button
+        type="submit"
+        id="login-btn"
+        class="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 px-4 rounded-md font-medium hover:opacity-90 transition-opacity focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 cursor-pointer"
+    >
         Sign in
     </button>
+    <a
+        id="registerLink"
+        href="{{ route('register.form') }}"
+        class="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 px-4 rounded-md font-medium hover:opacity-90 transition-opacity focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 cursor-pointer"
+    >
+        Register
+    </a>
 </form>
