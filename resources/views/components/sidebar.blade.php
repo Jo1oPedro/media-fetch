@@ -1,4 +1,4 @@
-<aside id="sidebar" class="min-h-screen w-fit md:w-64 bg-white border-r border-gray-200 flex flex-col">
+<aside id="sidebar" class="hidden md:block min-h-screen w-fit md:w-64 bg-white border-r border-gray-200 flex flex-col">
     <div id="sidebar-header" class="p-5 border-b border-gray-200">
         <div class="flex items-center space-x-3">
             <div class="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center">

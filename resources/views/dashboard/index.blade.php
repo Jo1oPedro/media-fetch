@@ -9,6 +9,8 @@
             <x-dashboard.header />
             <div id="main-dashboard" class="flex-1 overflow-auto p-6">
                 <x-dashboard.available-platform />
+                <x-dashboard.media-url-downloader />
+                <x-dashboard.recent-downloads />
             </div>
         </main>
     </div>
