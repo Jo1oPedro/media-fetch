@@ -3,7 +3,10 @@
 @section("title", "Download Dashboard Page")
 
 @section("content")
-    <x-sidebar />
+    <div class="flex h-screen">
+        <x-sidebar />
+        <x-dashboard.header />
+    </div>
 @endsection
 
 @push("scripts")
