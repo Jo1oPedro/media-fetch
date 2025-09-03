@@ -20,13 +20,14 @@ return new class extends Migration
 
             $table
                 ->foreignId("social_network_id")
+                ->nullable()
                 ->constrained("social_networks")
-                ->cascadeOnDelete();
+                ->nullOnDelete();
 
             $table->text("original_url");
             $table->text("s3_url")->nullable();
             $table->enum("status", ["pending", "success", "failed"])->default("pending");
-            $table->string("media_type");
+            $table->string("media_type")->nullable();
             $table->timestamps();
         });
     }
