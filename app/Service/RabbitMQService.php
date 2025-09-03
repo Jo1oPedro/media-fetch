@@ -2,13 +2,16 @@
 
 namespace App\Service;
 
+use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
 class RabbitMQService
 {
-    protected $connection;
-    protected $channel;
+    protected AMQPStreamConnection $connection;
+    protected AMQPChannel $channel;
+
+    protected string $queue;
 
     public function __construct()
     {

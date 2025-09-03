@@ -31,7 +31,7 @@ class MediaDownloadController extends Controller
 
         $this->rabbitMQService->publish(json_encode([
             "media_id" => $media->id,
-            "url" => $url,
+            "download_url" => $url,
             "format" => "mp4"
         ]));
 

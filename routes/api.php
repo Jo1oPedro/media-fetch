@@ -14,7 +14,7 @@ Route::middleware("auth:sanctum")->group(function () {
 });
 
 Route::middleware("verify.token")->group(function () {
-   Route::patch("/image/{media}/status", [MediaController::class, "updateMediaStatus"]);
+   Route::patch("/media/{media}/status", [MediaController::class, "updateMediaStatus"]);
 });
 
 Route::get("/dale", function () {
