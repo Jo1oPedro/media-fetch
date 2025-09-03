@@ -20,6 +20,12 @@ class MediaController extends Controller
                 true
             )
         );
+
+        Media::whereId($request->input("media_id"))->update([
+            "s3_url" => $request->input("url"),
+            "status" => $request->input("status")
+        ]);
+
         return response()->json(["dale"]);
     }
 }
