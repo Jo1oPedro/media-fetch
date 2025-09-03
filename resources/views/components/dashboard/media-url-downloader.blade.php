@@ -1,6 +1,6 @@
 <div id="url-input-section" class="bg-white rounded-lg border border-gray-200 p-6 mb-6">
     <h3 class="text-lg font-medium text-gray-900 mb-4">Enter Media URL</h3>
-    <div class="flex flex-col md:flex-row gap-4">
+    <div id="download-form" class="flex flex-col md:flex-row gap-4">
         <div class="flex-1">
             <input
                 type="url"
@@ -17,3 +17,7 @@
         Supported formats: MP4, MP3, JPG, PNG, GIF
     </p>
 </div>
+
+@push("scripts")
+    @vite("resources/js/download/download-panel.js")
+@endpush

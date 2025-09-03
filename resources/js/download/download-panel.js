@@ -12,7 +12,7 @@ $(function () {
         }
 
         $.ajax({
-            url: "/api/downloads",
+            url: "/api/download/media",
             method: "POST",
             data: {
                 url: url,
