@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Dashboard\DownloadController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -16,7 +17,5 @@ Route::middleware("guest")->group(function () {
 });
 
 Route::middleware("auth")->group(function () {
-    Route::get("/download", function() {
-        return view("dashboard/index");
-    })->name("download");
+    Route::get("/download", [DownloadController::class, "index"])->name("download");
 });

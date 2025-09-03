@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\Dashboard;
+namespace App\View\Components\Dashboard\Download;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -21,6 +21,6 @@ class RecentDownloads extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.dashboard.recent-downloads');
+        return view('components.dashboard.download.recent-downloads');
     }
 }

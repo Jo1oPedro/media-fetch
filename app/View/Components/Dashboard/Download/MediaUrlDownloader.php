@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\Dashboard;
+namespace App\View\Components\Dashboard\Download;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class AvailablePlatform extends Component
+class MediaUrlDownloader extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class AvailablePlatform extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.dashboard.available-platform');
+        return view('components.dashboard.download.media-url-downloader');
     }
 }

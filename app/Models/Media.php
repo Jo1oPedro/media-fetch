@@ -11,9 +11,12 @@ class Media extends Model
     use HasFactory;
 
     protected $fillable = [
-        "name",
-        "slug",
-        "base_url",
+        "user_id",
+        "social_network_id",
+        "original_url",
+        "s3_url",
+        "status",
+        "media_type",
     ];
 
     public function socialNetwork(): BelongsTo

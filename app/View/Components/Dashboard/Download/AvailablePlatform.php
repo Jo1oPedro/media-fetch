@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\Dashboard;
+namespace App\View\Components\Dashboard\Download;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Header extends Component
+class AvailablePlatform extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class Header extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.dashboard.header');
+        return view('components.dashboard.download.available-platform');
     }
 }

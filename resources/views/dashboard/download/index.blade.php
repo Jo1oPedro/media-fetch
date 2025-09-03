@@ -6,11 +6,11 @@
     <div class="flex h-screen">
         <x-sidebar />
         <main id="main-content" class="flex-1 flex flex-col overflow-hidden">
-            <x-dashboard.header />
+            <x-dashboard.download.header />
             <div id="main-dashboard" class="flex-1 overflow-auto p-6">
-                <x-dashboard.available-platform />
-                <x-dashboard.media-url-downloader />
-                <x-dashboard.recent-downloads />
+                <x-dashboard.download.available-platform />
+                <x-dashboard.download.media-url-downloader />
+                <x-dashboard.download.recent-downloads />
             </div>
         </main>
     </div>
