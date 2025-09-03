@@ -8,7 +8,9 @@
         <main id="main-content" class="flex-1 flex flex-col overflow-hidden">
             <x-dashboard.download.header />
             <div id="main-dashboard" class="flex-1 overflow-auto p-6">
-                <x-dashboard.download.available-platform />
+                <x-dashboard.download.available-platform
+                    :availablePlatforms="$socialNetworksAvailable"
+                />
                 <x-dashboard.download.media-url-downloader />
                 <x-dashboard.download.recent-downloads />
             </div>
