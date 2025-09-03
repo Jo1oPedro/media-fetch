@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\MediaDownloadController;
+use App\Http\Controllers\Api\MediaDownloadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
