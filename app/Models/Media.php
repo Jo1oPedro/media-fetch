@@ -16,7 +16,7 @@ class Media extends Model
         "original_url",
         "s3_url",
         "status",
-        "media_type",
+        "format",
     ];
 
     public function socialNetwork(): BelongsTo

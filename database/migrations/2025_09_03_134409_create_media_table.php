@@ -27,7 +27,7 @@ return new class extends Migration
             $table->text("original_url");
             $table->text("s3_url")->nullable();
             $table->enum("status", ["pending", "success", "failed"])->default("pending");
-            $table->string("media_type")->nullable();
+            $table->string("format");
             $table->timestamps();
         });
     }

@@ -33,6 +33,11 @@ class RabbitMQService
         );
     }
 
+    public function getChannel()
+    {
+        return $this->channel;
+    }
+
     public function publish(string $message): void
     {
         $msg = new AMQPMessage(

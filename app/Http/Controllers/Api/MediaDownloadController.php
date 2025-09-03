@@ -26,6 +26,7 @@ class MediaDownloadController extends Controller
         $media = Auth::user()->medias()->create([
             "social_network_id" => $platform?->id,
             "original_url" => $url,
+            "format" => "mp4"
         ]);
 
         $this->rabbitMQService->publish(json_encode([
