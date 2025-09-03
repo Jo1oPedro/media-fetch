@@ -3,18 +3,36 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\SocialNetwork;
+use App\Service\RabbitMQService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
 class MediaDownloadController extends Controller
 {
+    public function __construct(
+        protected RabbitMQService $rabbitMQService
+    ) {}
+
     public function download(Request $request): JsonResponse
     {
-        Log::info("Download solicitado", [
-            "url" => $request->input("url"),
-            "ip" => $request->ip(),
+        $url = $request->input("url");
+
+        $platform = SocialNetwork::all()->first(function ($network) use ($url) {
+           return str_contains($url, $network->base_url);
+        });
+
+        $media = Auth::user()->medias()->create([
+            "social_network_id" => $platform?->id,
+            "original_url" => $url,
         ]);
+
+        $this->rabbitMQService->publish(json_encode([
+            "media_id" => $media->id,
+            "url" => $url,
+            "format" => "mp4"
+        ]));
 
         return response()->json(["message" => "Url salva com sucesso!"]);
     }

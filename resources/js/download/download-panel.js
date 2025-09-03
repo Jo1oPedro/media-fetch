@@ -11,12 +11,20 @@ $(function () {
             return;
         }
 
+        const csrfToken = $("meta[name='csrf-token']").attr("content");
+
         $.ajax({
             url: "/api/download/media",
             method: "POST",
+            headers: {
+                'X-XSRF-TOKEN': csrfToken
+            },
             data: {
                 url: url,
-                _token: $("meta[name='csrf-token']").attr("content")
+                _token: csrfToken
+            },
+            xhrFields: {
+                withCredentials: true
             },
             success: function (response) {
                 console.log(response.message);

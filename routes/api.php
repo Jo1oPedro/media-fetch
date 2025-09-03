@@ -8,7 +8,9 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::post("/download/media", [MediaDownloadController::class, "download"]);
+Route::middleware("auth:sanctum")->group(function () {
+    Route::post("/download/media", [MediaDownloadController::class, "download"]);
+});
 
 Route::get("/dale", function () {
    return response()->json(["response" => "dale123"]);
