@@ -44,4 +44,14 @@ class AuthController extends Controller
             "email" => "As credencias fornecidas não foram encontradas"
         ]);
     }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect("/");
+    }
 }
