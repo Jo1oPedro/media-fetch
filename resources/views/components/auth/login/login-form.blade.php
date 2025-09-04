@@ -17,25 +17,7 @@
         </div>
     </div>
 
-    <div id="password-field">
-        <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
-            Password
-        </label>
-        <div class="relative">
-            <input
-                placeholder="Enter your password"
-                type="password"
-                id="password"
-                name="password"
-                required
-                class="w-full pl-11 pr-11 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
-            >
-            <x-bi-lock-fill class="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-            <button type="button" id="toggle-password" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
-                <x-fas-eye class="w-4 h-4 text-gray-400"/>
-            </button>
-        </div>
-    </div>
+    <x-inputs.input-password />
 
     <div id="remember-forgot" class="flex items-center justify-between">
         <label class="flex items-center">
