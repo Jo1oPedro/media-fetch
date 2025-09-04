@@ -13,6 +13,7 @@ class DownloadController extends Controller
         $socialNetworksAvailable = SocialNetwork::all();
         $recentMediaDownloads = Auth::user()
             ->medias()
+            ->with("socialNetwork")
             ->latest()
             ->take(4)
             ->get();
