@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\MediaDownloadController\DownloadFormRequest;
 use App\Models\SocialNetwork;
 use App\Service\RabbitMQService;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class MediaDownloadController extends Controller
@@ -15,7 +15,7 @@ class MediaDownloadController extends Controller
         protected RabbitMQService $rabbitMQService
     ) {}
 
-    public function download(Request $request): JsonResponse
+    public function download(DownloadFormRequest $request): JsonResponse
     {
         $url = $request->input("url");
 
