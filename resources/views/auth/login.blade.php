@@ -25,10 +25,10 @@
                     <x-bi-google class="h-4 w-4 text-red-500 mr-3"/>
                     <span class="text-gray-700 font-medium">Continue with Google</span>
                 </button>
-                <button class="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors cursor-pointer">
+                <a href="{{route("discord.oauth")}}" class="inline-flex w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors cursor-pointer">
                     <x-bi-discord class="h-4 w-4 text-indigo-500 mr-3"/>
                     <span class="text-gray-700 font-medium">Continue with Discord</span>
-                </button>
+                </a>
             </div>
         </div>
     </div>

@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'discord' => [
+        'url' => env('DISCORD_URL'),
+        'redirect_url' => env('DISCORD_REDIRECT_URL'),
+        'client_id' => env('DISCORD_CLIENT_ID'),
+        'client_secret' => env('DISCORD_CLIENT_SECRET')
+    ]
 ];
