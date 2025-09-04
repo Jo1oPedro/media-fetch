@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Auth\RegisterFormRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,18 +14,12 @@ class AuthController extends Controller
         return view("auth/register");
     }
 
-    public function register(Request $request)
+    public function register(RegisterFormRequest $request)
     {
-        $request->validate([
-            "name" => ["required", "string", "max:255"],
-            "email" => ["required", "string", "email", "max:255", "unique:users"],
-            "password" => ["required", "string", "min:8", "confirmed"]
-        ]);
-
         $user = User::create([
-            "name" => $request->name,
-            "email" => $request->email,
-            "password" => Hash::make($request->password)
+            "name" => $request->validated("name"),
+            "email" => $request->validated("email"),
+            "password" => Hash::make($request->validated("password"))
         ]);
 
         Auth::login($user);
