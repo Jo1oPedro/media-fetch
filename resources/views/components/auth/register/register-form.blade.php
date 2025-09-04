@@ -56,8 +56,9 @@
                 class="w-full pl-11 pr-11 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
             >
             <x-bi-lock-fill class="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-            <button type="button" id="toggle-password" class="cursor-pointer absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
-                <x-fas-eye class="w-4 h-4 text-gray-400"/>
+            <button type="button" id="toggle-password" class="toggle-password cursor-pointer absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                <x-fas-eye class="eye-password w-4 h-4 text-gray-400"/>
+                <x-heroicon-s-eye-slash class="eye-slash-password w-4 h-4 text-gray-400 hidden"/>
             </button>
         </div>
         @error('password')
@@ -79,8 +80,9 @@
                 class="w-full pl-11 pr-11 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
             >
             <x-bi-lock-fill class="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-            <button type="button" id="toggle-password" class="cursor-pointer absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
-                <x-fas-eye class="w-4 h-4 text-gray-400"/>
+            <button type="button" id="toggle-password-confirmation" class="toggle-password cursor-pointer absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                <x-fas-eye class="eye-password w-4 h-4 text-gray-400"/>
+                <x-heroicon-s-eye-slash class="eye-slash-password w-4 h-4 text-gray-400 hidden"/>
             </button>
         </div>
     </div>
@@ -93,3 +95,23 @@
         Register
     </button>
 </form>
+
+@push("scripts")
+    <script>
+        window.addEventListener("load", function () {
+            $(document).on("click", ".toggle-password", function () {
+                let input = $(this).siblings("input");
+
+                if(input.attr("type") === "password") {
+                    input.attr("type", "text");
+                    $(this).find(".eye-password").addClass("hidden");
+                    $(this).find(".eye-slash-password").removeClass("hidden");
+                } else {
+                    input.attr("type", "password");
+                    $(this).find(".eye-password").removeClass("hidden");
+                    $(this).find(".eye-slash-password").addClass("hidden");
+                }
+            });
+        });
+    </script>
+@endpush
