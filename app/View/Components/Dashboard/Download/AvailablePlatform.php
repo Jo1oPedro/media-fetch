@@ -18,6 +18,7 @@ class AvailablePlatform extends Component
 
     public array $icons = [
         "twitter" => "bi-twitter",
+        "x" => "bi-x",
         "facebook" => "bi-facebook",
         "instagram" => "bi-instagram",
         "tiktok" => "fab-tiktok",
@@ -26,6 +27,7 @@ class AvailablePlatform extends Component
 
     public array $iconColor = [
         "twitter" => "text-blue-400",
+        "x" => "text-blue-400",
         "facebook" => "text-blue-600",
         "instagram" => "text-pink-500",
         "tiktok" => "text-gray-800",

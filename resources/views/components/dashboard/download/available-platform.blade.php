@@ -12,13 +12,5 @@
                 <span class="text-sm font-medium text-gray-700">{{ ucfirst($platform->slug) }}</span>
             </button>
         @endforeach
-
-        <button id="tiktok" class="relative platform-btn flex flex-col items-center p-4 border rounded-lg hover:border-indigo-500 hover:bg-indigo-500/5 transition-colors border-indigo-500 bg-indigo-500/5">
-            <div class="absolute -top-1.5 -right-1.5 bg-red-500 rounded-full p-1">
-                <x-feathericon-x class="text-white w-3 h-3"/>
-            </div>
-            <x-fab-tiktok class="text-gray-800 h-5 w-5" />
-            <span class="text-sm font-medium text-gray-700">Tiktok</span>
-        </button>
     </div>
 </div>
