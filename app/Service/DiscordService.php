@@ -52,7 +52,8 @@ class DiscordService
             [
                 "name" => $discordUser["username"],
                 "email" => $discordUser["email"] ?? $discordUser["id"] . "@discord.local",
-                "password" => bcrypt(str()->random(32))
+                "password" => bcrypt(str()->random(32)),
+                "discord_refresh_token" => $data["refresh_token"]
             ]
         );
 
