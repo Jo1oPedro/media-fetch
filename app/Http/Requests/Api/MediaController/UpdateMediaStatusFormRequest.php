@@ -22,7 +22,8 @@ class UpdateMediaStatusFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "s3_url" => ["required", "url", "unique:media,s3_url"],
+            "media_id" => ["required", "exists:media,id"],
+            "url" => ["required", "url"],
             "status" => ["required", "string"]
         ];
     }
