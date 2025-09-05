@@ -9,6 +9,24 @@ use Illuminate\View\Component;
 
 class RecentDownloads extends Component
 {
+    public array $icons = [
+        "twitter" => "bi-twitter",
+        "x" => "bi-x",
+        "facebook" => "bi-facebook",
+        "instagram" => "bi-instagram",
+        "tiktok" => "fab-tiktok",
+        "youtube" => "bi-youtube",
+    ];
+
+    public array $iconColor = [
+        "twitter" => "text-blue-400",
+        "x" => "text-gray-800",
+        "facebook" => "text-blue-600",
+        "instagram" => "text-pink-500",
+        "tiktok" => "text-gray-800",
+        "youtube" => "text-red-500",
+    ];
+
     /**
      * Create a new component instance.
      */

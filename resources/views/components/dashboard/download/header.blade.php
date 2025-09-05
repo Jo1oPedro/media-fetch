@@ -12,7 +12,7 @@
                 <x-bi-gear-fill class="w-4 h-4"/>
             </button>
             <div id="header-options" class="absolute right-0 top-full hidden bg-gray-100">
-                <ul class="space-y-2 bg-red-200">
+                <ul class="space-y-2">
                     <li>
                         <a href="{{ route("logout") }}" class="flex items-center space-x-3 px-4 py-3 text-gray-700 rounded-lg font-medium cursor-pointer hover:bg-indigo-500/10">
                             <span class="hidden md:block">Logout</span>

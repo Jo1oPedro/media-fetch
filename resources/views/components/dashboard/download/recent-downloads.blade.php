@@ -9,7 +9,10 @@
             <div class="flex flex-col md:flex-row items-center gap-4 p-4 bg-gray-50 rounded-lg">
                 <div class="flex gap-4">
                     <div class="w-12 h-12 bg-gradient-to-br from-pink-400 to-purple-500 rounded-lg flex items-center justify-center">
-                        <x-bi-instagram class="text-white h-5 w-5" />
+                        <x-dynamic-component
+                            component="{{$icons[$media->socialNetwork?->slug]}}"
+                            class="{{$iconColor[$media->socialNetwork?->slug]}} h-5 w-5"
+                        />
                     </div>
                     <div class="flex-1">
                         <p class="font-medium text-gray-900">
@@ -26,6 +29,7 @@
                     </span>
                     <a
                         href="{{ $media->s3_url ?? $media->original_url }}"
+                        target="_blank"
                         class="inline-flex p-2 text-gray-400 hover:text-gray-600 cursor-pointer"
                     >
                         <x-eva-download-outline class="w-4 h-4"/>
