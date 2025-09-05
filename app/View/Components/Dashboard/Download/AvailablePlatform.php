@@ -27,7 +27,7 @@ class AvailablePlatform extends Component
 
     public array $iconColor = [
         "twitter" => "text-blue-400",
-        "x" => "text-blue-400",
+        "x" => "text-gray-800",
         "facebook" => "text-blue-600",
         "instagram" => "text-pink-500",
         "tiktok" => "text-gray-800",
